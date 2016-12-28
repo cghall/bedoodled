@@ -3,14 +3,23 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta">by <strong>{{page.post_author}}</strong> </p>
-    <p class="post-meta"> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-  </header>
+  <div class="block block-bordered-lg pb-0 mb-0">
+  	<div class="container">
+    	<div class="row">
+      		<div class="col-sm-8 offset-sm-2 text-center mb-5">
+			  
+			  <header class="post-header">
+			    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+			    <p class="post-meta">by <strong>{{page.post_author}}</strong> </p>
+			    <p class="post-meta"> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+			  </header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+			  <div class="post-content" itemprop="articleBody">
+			    {{ content }}
+			  </div>
+			  
+  			</div>
+		</div>
+  	</div>
 
 </article>
