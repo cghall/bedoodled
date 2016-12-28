@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <p class="post-meta">by <strong>Rachel Hall</strong> {{ post.date | date: "%b %-d, %Y" }}</p>
+  {{ post.excerpt }}
+  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+    {% endfor %}
